@@ -1,29 +1,29 @@
 ---
 title: "Báo cáo thực tập"
-date: 2024-01-01
+date: 2027-01-01
 weight: 1
 chapter: false
 ---
 
 # Báo cáo thực tập
 ### Thông tin sinh viên:
-&emsp; **Họ và tên:** Nguyễn Văn A
+&emsp; **Họ và tên:** Phạm Trần Quốc Bảo
 
-&emsp; **Số điện thoại:** 0989888999
+&emsp; **Số điện thoại:** 0962318551
 
-&emsp; **Email:** Anguyenvan@gmail.com
+&emsp; **Email:** 23133006@student.hcmute.edu.vn
 
-&emsp; **Trường:** Đại học Sư phạm Kỹ thuật TP.HCM
+&emsp; **Trường:** Đại học Công Nghệ Kỹ Thuật TPHCM
 
-&emsp; **Ngành:** Công nghệ thông tin
+&emsp; **Ngành:** Kỹ Thuật Dữ Liệu
 
-&emsp; **Lớp:** AWS082025
+&emsp; **Lớp:** AWS102026
 
 &emsp; **Công ty thực tập:** Công ty TNHH Amazon Web Services Viet Nam
 
 &emsp; **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 
-&emsp; **Thời gian thực tập:** Từ ngày 12/08/2025 đến ngày 12/11/2025
+&emsp; **Thời gian thực tập:** Từ ngày 1/10/2026 đến ngày 01/01/2027
 
 ![Ảnh đại diện của bạn](/images/avatar.png)
 
