@@ -17,8 +17,8 @@ pre: " <b> 1.1. </b> "
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
 | 2   |- Tìm hiểu về quy trình, cách làm việc, vận hành của AWS <br>&emsp; + Tạo tài khoản AWS <br>&emsp; + Thao tác với AWS Budget, AWS Support, AWS IAM, VPC, Subnet | 05/10/2026   | 05/10/2026| <https://cloudjourney.awsstudygroup.com/> |
 | 3   | - Tiếp tục tìm hiểu các dịch vụ: <br>&emsp; + Tạo Internet Gateway <br>&emsp; + Tạo Route Table <br>&emsp; + Tạo Security Group <br>&emsp; + Kích hoạt Flow Logs <br>&emsp;             | 06/10/2026   | 06/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Trển khai EC2 <br> - Kiểm tra kết nối EC2 <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Trển khai EC2 <br> - Kiểm tra kết nối EC2 <br> - Tạo NAT Gateway<br> - Sử dụng Reachability Analyzer <br> - Tạo EC2 kết nối Endpoint<br> - Thực hành System Manager Session Manager<br>| 7/10/2026   | 7/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thiết lập kết nối VPN Site-to-site trong AWS <br>&emsp; + Tạo môi trường VPN <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 | 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
@@ -41,8 +41,13 @@ pre: " <b> 1.1. </b> "
 ![Kích hoạt Flow Logs](/images/week1/flowlog.png)
 * Đã thực hành triển khai EC2
 ![Tạo EC2 Server](/images/week1/ec2.png)
-
-
+![Kiểm tra kết nối](/images/week1/testConnection.png)
+![Tạo NAT Gateway](/images/week1/nat.png)
+![Sử dụng Reachability Analyzer](/images/week1/ra.png)
+![Tạo EC2 kết nối Endpoint](/images/week1/endpoint.png)
+* Thiết lập kết nối VPN Site-to-site trong AWS
+  * Tạo môi trường VPN
+  
 * Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
   * Access Key
   * Secret Key
