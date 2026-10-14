@@ -18,8 +18,8 @@ pre: " <b> 1.1. </b> "
 | 2   |- Tìm hiểu về quy trình, cách làm việc, vận hành của AWS <br>&emsp; + Tạo tài khoản AWS <br>&emsp; + Thao tác với AWS Budget, AWS Support, AWS IAM, VPC, Subnet | 05/10/2026   | 05/10/2026| <https://cloudjourney.awsstudygroup.com/> |
 | 3   | - Tiếp tục tìm hiểu các dịch vụ: <br>&emsp; + Tạo Internet Gateway <br>&emsp; + Tạo Route Table <br>&emsp; + Tạo Security Group <br>&emsp; + Kích hoạt Flow Logs <br>&emsp;             | 06/10/2026   | 06/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
 | 4   | - Trển khai EC2 <br> - Kiểm tra kết nối EC2 <br> - Tạo NAT Gateway<br> - Sử dụng Reachability Analyzer <br> - Tạo EC2 kết nối Endpoint<br> - Thực hành System Manager Session Manager<br>| 7/10/2026   | 7/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Thiết lập kết nối VPN Site-to-site trong AWS <br>&emsp; + Tạo môi trường VPN <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thiết lập kết nối VPN Site-to-site trong AWS <br> - Tuỳ chỉnh AWS VPN Tunnel <br> - Cấu hình kết nối VPN <br>            | 08/10/2026   | 08/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Cấu hình VPN thay thế <br> - Tìm hiểu một số dự án | 09/10/2026  | 09/10/2026      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 1:
@@ -47,23 +47,14 @@ pre: " <b> 1.1. </b> "
 ![Tạo EC2 kết nối Endpoint](/images/week1/endpoint.png)
 * Thiết lập kết nối VPN Site-to-site trong AWS
   * Tạo môi trường VPN
-  
-* Cài đặt và cấu hình AWS CLI trên máy tính bao gồm:
-  * Access Key
-  * Secret Key
-  * Region mặc định
-  * ...
-
-* Sử dụng AWS CLI để thực hiện các thao tác cơ bản như:
-
-  * Kiểm tra thông tin tài khoản & cấu hình
-  * Lấy danh sách region
-  * Xem dịch vụ EC2
-  * Tạo và quản lý key pair
-  * Kiểm tra thông tin dịch vụ đang chạy
-  * ...
-
-* Có khả năng kết nối giữa giao diện web và CLI để quản lý tài nguyên AWS song song.
-* ...
+  ![Tạo VPC cho VPN](/images/week1/vpcvpn.png)
+  ![Tạo phiên bản EC2](/images/week1/ec2vpn.png)
+  * Cấu hình kết nối VPN
+  ![Tạo cổng riêng ảo](/images/week1/vpg.png)
+  ![Tạo cổng Customer](/images/week1/customergateway.png)
+  ![Tạo kết nối VPN](/images/week1/createVPNconnection.png)
+  ![Cấu hình kết nối Customer](/images/week1/customerGatewayConfiguration.png)
+  ![Tuỳ chỉnh AWS VPN Tunnel](/images/week1/vpntunnel.png)
+  ![Cấu hình VPN thay thế](/images/week1/ikiev2.png)
 
 
