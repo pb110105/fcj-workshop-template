@@ -34,17 +34,17 @@ pre: " <b> 1.1. </b> "
 
 **Minh họa AWS Budget:**
 
-![AWS Budget đã tạo; email nhận thông báo đang chờ xác minh](/images/week1/budget.png)
+![AWS Budget đã tạo; email nhận thông báo đang chờ xác minh](/fcj-workshop-template/images/week1/budget.png)
 
 **Minh họa AWS Support case:**
 
-![Gửi yêu cầu hỗ trợ đến AWS Support](/images/week1/support.png)
+![Gửi yêu cầu hỗ trợ đến AWS Support](/fcj-workshop-template/images/week1/support.png)
 
 #### 2. Quản lý truy cập với IAM
 
 - Thực hành cấp quyền bằng policy **AdministratorAccess**.
 
-![Thực hành cấp quyền với AWS IAM](/images/week1/iam.png)
+![Thực hành cấp quyền với AWS IAM](/fcj-workshop-template/images/week1/iam.png)
 
 #### 3. Xây dựng mạng VPC
 
@@ -58,27 +58,27 @@ Thực hành các thành phần mạng trong bài lab **Networking Essentials wi
 
 **Tạo VPC:**
 
-![Tạo VPC](/images/week1/createVPC.png)
+![Tạo VPC](/fcj-workshop-template/images/week1/createVPC.png)
 
 **Tạo Subnet:**
 
-![Tạo Subnet](/images/week1/subnet.png)
+![Tạo Subnet](/fcj-workshop-template/images/week1/subnet.png)
 
 **Tạo Internet Gateway:**
 
-![Tạo Internet Gateway](/images/week1/ig.png)
+![Tạo Internet Gateway](/fcj-workshop-template/images/week1/ig.png)
 
 **Cấu hình Route Table:**
 
-![Cấu hình Route Table](/images/week1/route.png)
+![Cấu hình Route Table](/fcj-workshop-template/images/week1/route.png)
 
 **Tạo Security Group:**
 
-![Tạo Security Group](/images/week1/sg.png)
+![Tạo Security Group](/fcj-workshop-template/images/week1/sg.png)
 
 **Kích hoạt VPC Flow Logs:**
 
-![Kích hoạt VPC Flow Logs](/images/week1/flowlog.png)
+![Kích hoạt VPC Flow Logs](/fcj-workshop-template/images/week1/flowlog.png)
 
 #### 4. Triển khai EC2 và kiểm tra kết nối
 
@@ -90,23 +90,23 @@ Thực hành các thành phần mạng trong bài lab **Networking Essentials wi
 
 **Triển khai EC2:**
 
-![Triển khai EC2](/images/week1/ec2.png)
+![Triển khai EC2](/fcj-workshop-template/images/week1/ec2.png)
 
 **Kiểm tra kết nối:**
 
-![Kiểm tra kết nối EC2](/images/week1/testConnection.png)
+![Kiểm tra kết nối EC2](/fcj-workshop-template/images/week1/testConnection.png)
 
 **Tạo NAT Gateway:**
 
-![Tạo NAT Gateway](/images/week1/nat.png)
+![Tạo NAT Gateway](/fcj-workshop-template/images/week1/nat.png)
 
 **Sử dụng Reachability Analyzer:**
 
-![Sử dụng Reachability Analyzer](/images/week1/ra.png)
+![Sử dụng Reachability Analyzer](/fcj-workshop-template/images/week1/ra.png)
 
 **Truy cập bằng Session Manager:**
 
-![Truy cập EC2 bằng AWS Systems Manager Session Manager](/images/week1/manager.png)
+![Truy cập EC2 bằng AWS Systems Manager Session Manager](/fcj-workshop-template/images/week1/manager.png)
 
 #### 5. Thiết lập VPN Site-to-Site
 
@@ -117,25 +117,24 @@ Thực hành các thành phần mạng trong bài lab **Networking Essentials wi
 
 **Tạo môi trường VPN:**
 
-![Tạo VPC cho môi trường VPN](/images/week1/vpcvpn.png)
+![Tạo VPC cho môi trường VPN](/fcj-workshop-template/images/week1/vpcvpn.png)
 
-![Tạo EC2 làm Customer Gateway](/images/week1/ec2vpn.png)
+![Tạo EC2 làm Customer Gateway](/fcj-workshop-template/images/week1/ec2vpn.png)
 
 **Tạo các thành phần kết nối:**
+![Tạo Virtual Private Gateway](/fcj-workshop-template/images/week1/vpg.png)
 
-![Tạo Virtual Private Gateway](/images/week1/vpg.png)
+![Tạo Customer Gateway](/fcj-workshop-template/images/week1/customergateway.png)
 
-![Tạo Customer Gateway](/images/week1/customergateway.png)
-
-![Tạo VPN Connection](/images/week1/createVPNconnection.png)
+![Tạo VPN Connection](/fcj-workshop-template/images/week1/createVPNconnection.png)
 
 **Cấu hình và kiểm tra VPN:**
 
-![Cấu hình Customer Gateway](/images/week1/customerGatewayConfiguration.png)
+![Cấu hình Customer Gateway](/fcj-workshop-template/images/week1/customerGatewayConfiguration.png)
 
-![Tùy chỉnh AWS VPN Tunnel](/images/week1/vpntunnel.png)
+![Tùy chỉnh AWS VPN Tunnel](/fcj-workshop-template/images/week1/vpntunnel.png)
 
-![Thực hành cấu hình IKEv2](/images/week1/ikiev2.png)
+![Thực hành cấu hình IKEv2](/fcj-workshop-template/images/week1/ikiev2.png)
 
 ### Khó khăn và cách xử lý
 

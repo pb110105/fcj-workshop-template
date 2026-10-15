@@ -34,17 +34,16 @@ pre: " <b> 1.1. </b> "
 
 **AWS Budget screenshot:**
 
-![AWS Budget created; notification email verification is pending](/images/week1/budget.png)
+![AWS Budget created; notification email verification is pending](/fcj-workshop-template/images/week1/budget.png)
 
 **AWS Support case screenshot:**
-
-![Submitting a support case to AWS Support](/images/week1/support.png)
+![Submitting a support case to AWS Support](/fcj-workshop-template/images/week1/support.png)
 
 #### 2. Access Management with IAM
 
 - Practiced granting permissions using the **AdministratorAccess** policy.
 
-![Practicing permission management with AWS IAM](/images/week1/iam.png)
+![Practicing permission management with AWS IAM](/fcj-workshop-template/images/week1/iam.png)
 
 #### 3. Building a VPC Network
 
@@ -58,27 +57,27 @@ Practiced configuring network components in the **Networking Essentials with Ama
 
 **Creating a VPC:**
 
-![Creating a VPC](/images/week1/createVPC.png)
+![Creating a VPC](/fcj-workshop-template/images/week1/createVPC.png)
 
 **Creating subnets:**
 
-![Creating subnets](/images/week1/subnet.png)
+![Creating subnets](/fcj-workshop-template/images/week1/subnet.png)
 
 **Creating an Internet Gateway:**
 
-![Creating an Internet Gateway](/images/week1/ig.png)
+![Creating an Internet Gateway](/fcj-workshop-template/images/week1/ig.png)
 
 **Configuring route tables:**
 
-![Configuring route tables](/images/week1/route.png)
+![Configuring route tables](/fcj-workshop-template/images/week1/route.png)
 
 **Creating security groups:**
 
-![Creating security groups](/images/week1/sg.png)
+![Creating security groups](/fcj-workshop-template/images/week1/sg.png)
 
 **Enabling VPC Flow Logs:**
 
-![Enabling VPC Flow Logs](/images/week1/flowlog.png)
+![Enabling VPC Flow Logs](/fcj-workshop-template/images/week1/flowlog.png)
 
 #### 4. Deploying EC2 Instances and Testing Connectivity
 
@@ -90,23 +89,23 @@ Practiced configuring network components in the **Networking Essentials with Ama
 
 **Deploying EC2 instances:**
 
-![Deploying EC2 instances](/images/week1/ec2.png)
+![Deploying EC2 instances](/fcj-workshop-template/images/week1/ec2.png)
 
 **Testing connectivity:**
 
-![Testing EC2 connectivity](/images/week1/testConnection.png)
+![Testing EC2 connectivity](/fcj-workshop-template/images/week1/testConnection.png)
 
 **Creating a NAT Gateway:**
 
-![Creating a NAT Gateway](/images/week1/nat.png)
+![Creating a NAT Gateway](/fcj-workshop-template/images/week1/nat.png)
 
 **Using Reachability Analyzer:**
 
-![Using Reachability Analyzer](/images/week1/ra.png)
+![Using Reachability Analyzer](/fcj-workshop-template/images/week1/ra.png)
 
 **Accessing EC2 through Session Manager:**
 
-![Accessing EC2 through AWS Systems Manager Session Manager](/images/week1/manager.png)
+![Accessing EC2 through AWS Systems Manager Session Manager](/fcj-workshop-template/images/week1/manager.png)
 
 #### 5. Establishing a Site-to-Site VPN
 
@@ -117,25 +116,25 @@ Practiced configuring network components in the **Networking Essentials with Ama
 
 **Creating the VPN environment:**
 
-![Creating a VPC for the VPN environment](/images/week1/vpcvpn.png)
+![Creating a VPC for the VPN environment](/fcj-workshop-template/images/week1/vpcvpn.png)
 
-![Creating an EC2 instance to act as the Customer Gateway](/images/week1/ec2vpn.png)
+![Creating an EC2 instance to act as the Customer Gateway](/fcj-workshop-template/images/week1/ec2vpn.png)
 
 **Creating connection components:**
 
-![Creating a Virtual Private Gateway](/images/week1/vpg.png)
+![Creating a Virtual Private Gateway](/fcj-workshop-template/images/week1/vpg.png)
 
-![Creating a Customer Gateway](/images/week1/customergateway.png)
+![Creating a Customer Gateway](/fcj-workshop-template/images/week1/customergateway.png)
 
-![Creating a VPN connection](/images/week1/createVPNconnection.png)
+![Creating a VPN connection](/fcj-workshop-template/images/week1/createVPNconnection.png)
 
 **Configuring and Testing the VPN:**
 
-![Configuring the Customer Gateway](/images/week1/customerGatewayConfiguration.png)
+![Configuring the Customer Gateway](/fcj-workshop-template/images/week1/customerGatewayConfiguration.png)
 
-![Customizing AWS VPN tunnel options](/images/week1/vpntunnel.png)
+![Customizing AWS VPN tunnel options](/fcj-workshop-template/images/week1/vpntunnel.png)
 
-![Practicing IKEv2 configuration](/images/week1/ikiev2.png)
+![Practicing IKEv2 configuration](/fcj-workshop-template/images/week1/ikiev2.png)
 
 ### Challenges and Solutions
 
