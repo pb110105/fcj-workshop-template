@@ -1,57 +1,33 @@
 ---
 title: "Week 2 Worklog"
-date: 2024-01-01
+date: 2026-10-12
 weight: 1
 chapter: false
 pre: " <b> 1.2. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 2 Objectives
 
-### Week 2 Objectives:
+- Review the AWS environment.
+- Explore project topics and develop an initial plan.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Tasks for This Week
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Tasks | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | - Explore project ideas and topics on AWS.<br>- Read documentation on deploying serverless applications with AWS SAM. | 12/10/2026 | 12/10/2026 | [AWS SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) |
+| Tuesday | - Continue exploring suitable project topics.<br>- Research electricity trends and potential data sources for the project. | 13/10/2026 | 13/10/2026 | [IEA Electricity 2026](https://www.iea.org/reports/electricity-2026) |
+| Wednesday | - Review active AWS resources.<br>- Identify unused resources and plan cleanup to reduce costs. | 14/10/2026 | 14/10/2026 | [AWS Free Tier](https://aws.amazon.com/free/) |
+| Thursday | - Explore and compare data pipeline and automated file processing topics.<br>- Identify core functionality and potential AWS services. | 15/10/2026 | 15/10/2026 | [Amazon Athena](https://docs.aws.amazon.com/athena/latest/ug/what-is.html), [AWS SAM](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) |
+| Friday | - Select electricity data as the project focus; explore EIA Open Data, API documentation, and Grid Monitor.<br>- Outline the project implementation plan and potential AWS services.<br>- Clean up resources from previous labs and check the remaining AWS credits. | 16/10/2026 | 16/10/2026 | [EIA Open Data](https://www.eia.gov/opendata/), [EIA API](https://www.eia.gov/opendata/documentation.php), [Grid Monitor](https://www.eia.gov/electricity/gridmonitor/) |
 
+### Achievements
 
-### Week 2 Achievements:
-
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
-
-* Successfully created and configured an AWS Free Tier account.
-
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
-
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+- Explored and compared project topics involving data pipelines, automated file processing, monitoring, and backups.
+- Selected the project direction: building a pipeline for API-based electricity data ingestion, data quality validation, and analytics on AWS with automated deployment.
+- Defined the proposed functional scope: scheduled data collection, raw and clean data storage, data quality checks, deduplication, error handling, analytics, and monitoring.
+- Began exploring EIA Open Data, API documentation, and Electric Grid Monitor.
+- Studied the roles of potential AWS services and AWS SAM for infrastructure as code deployment.
+- Reviewed AWS costs and resources from previous labs; stopped three EC2 instances, deleted the VPN connection, NAT Gateway, three Interface Endpoints, and the VPC Flow Logs configuration; released the Elastic IP address.
+- Set CloudWatch Logs retention to one day and retained three EBS volumes to preserve lab data and configurations.
+- Outlined the project implementation approach with a focus on cost control.
