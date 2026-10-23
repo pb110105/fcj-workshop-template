@@ -1,115 +1,264 @@
 ---
-title: "Proposal"
-date: 2024-01-01
+title: "Project Proposal"
+date: 2026-10-23
 weight: 2
 chapter: false
 pre: " <b> 2. </b> "
 ---
-{{% notice warning %}}
-⚠️ **Note:** The information below is for reference purposes only. Please **do not copy verbatim** for your report, including this warning.
-{{% /notice %}}
 
-In this section, you need to summarize the contents of the workshop that you **plan** to conduct.
+# Building an Electricity Data Ingestion, Quality Validation, and Analytics Pipeline on AWS with Automated Deployment
 
-# IoT Weather Platform for Lab Research
-## A Unified AWS Serverless Solution for Real-Time Weather Monitoring
+## 1. Project Overview
 
-### 1. Executive Summary
-The IoT Weather Platform is designed for the ITea Lab team in Ho Chi Minh City to enhance weather data collection and analysis. It supports up to 5 weather stations, with potential scalability to 10-15, utilizing Raspberry Pi edge devices with ESP32 sensors to transmit data via MQTT. The platform leverages AWS Serverless services to deliver real-time monitoring, predictive analytics, and cost efficiency, with access restricted to 5 lab members via Amazon Cognito.
+This project builds a pipeline to collect electricity data from the EIA Open Data API, validate its quality, store it, and provide datasets for analysis. The proposed system uses a serverless architecture on AWS, with infrastructure deployed through the AWS Serverless Application Model (AWS SAM).
 
-### 2. Problem Statement
-### What’s the Problem?
-Current weather stations require manual data collection, becoming unmanageable with multiple units. There is no centralized system for real-time data or analytics, and third-party platforms are costly and overly complex.
+The initial scope focuses on the California Independent System Operator (CISO), covering three hourly metrics:
 
-### The Solution
-The platform uses AWS IoT Core to ingest MQTT data, AWS Lambda and API Gateway for processing, Amazon S3 for storage (including a data lake), and AWS Glue Crawlers and ETL jobs to extract, transform, and load data from the S3 data lake to another S3 bucket for analysis. AWS Amplify with Next.js provides the web interface, and Amazon Cognito ensures secure access. Similar to Thingsboard and CoreIoT, users can register new devices and manage connections, though this platform operates on a smaller scale and is designed for private use. Key features include real-time dashboards, trend analysis, and low operational costs.
+- **D — Demand:** Actual electricity demand.
+- **DF — Day-ahead demand forecast:** Electricity demand forecast for the following day.
+- **NG — Net generation:** Net electricity generation.
 
-### Benefits and Return on Investment
-The solution establishes a foundational resource for lab members to develop a larger IoT platform, serving as a study resource, and provides a data foundation for AI enthusiasts for model training or analysis. It reduces manual reporting for each station via a centralized platform, simplifying management and maintenance, and improves data reliability. Monthly costs are $0.66 USD per the AWS Pricing Calculator, with a 12-month total of $7.92 USD. All IoT equipment costs are covered by the existing weather station setup, eliminating additional development expenses. The break-even period of 6-12 months is achieved through significant time savings from reduced manual work.
+Timestamps are processed in UTC. Values retain the source unit provided by EIA: megawatthours (MWh).
 
-### 3. Solution Architecture
-The platform employs a serverless AWS architecture to manage data from 5 Raspberry Pi-based stations, scalable to 15. Data is ingested via AWS IoT Core, stored in an S3 data lake, and processed by AWS Glue Crawlers and ETL jobs to transform and load it into another S3 bucket for analysis. Lambda and API Gateway handle additional processing, while Amplify with Next.js hosts the dashboard, secured by Cognito. The architecture is detailed below:
+## 2. Problem Statement
 
-![IoT Weather Station Architecture](/images/2-Proposal/edge_architecture.jpeg)
+Manually calling an API, downloading data, saving files, and validating records becomes difficult when data requires regular updates or processing across multiple periods. Missing hourly records, duplicate records, and invalid formats can affect analytical results.
 
-![IoT Weather Platform Architecture](/images/2-Proposal/platform_architecture.jpeg)
+The project proposes a consistent workflow to:
 
-### AWS Services Used
-- **AWS IoT Core**: Ingests MQTT data from 5 stations, scalable to 15.
-- **AWS Lambda**: Processes data and triggers Glue jobs (two functions).
-- **Amazon API Gateway**: Facilitates web app communication.
-- **Amazon S3**: Stores raw data in a data lake and processed outputs (two buckets).
-- **AWS Glue**: Crawlers catalog data, and ETL jobs transform and load it.
-- **AWS Amplify**: Hosts the Next.js web interface.
-- **Amazon Cognito**: Secures access for lab users.
+- Collect data using configurable parameters.
+- Validate data quality before analysis.
+- Store original, clean, and rejected data separately.
+- Track the status and errors of each execution.
+- Support reruns and historical backfills.
+- Recreate infrastructure using configuration code.
 
-### Component Design
-- **Edge Devices**: Raspberry Pi collects and filters sensor data, sending it to IoT Core.
-- **Data Ingestion**: AWS IoT Core receives MQTT messages from the edge devices.
-- **Data Storage**: Raw data is stored in an S3 data lake; processed data is stored in another S3 bucket.
-- **Data Processing**: AWS Glue Crawlers catalog the data, and ETL jobs transform it for analysis.
-- **Web Interface**: AWS Amplify hosts a Next.js app for real-time dashboards and analytics.
-- **User Management**: Amazon Cognito manages user access, allowing up to 5 active accounts.
+## 3. Project Objectives
 
-### 4. Technical Implementation
-**Implementation Phases**
-This project has two parts—setting up weather edge stations and building the weather platform—each following 4 phases:
-- Build Theory and Draw Architecture: Research Raspberry Pi setup with ESP32 sensors and design the AWS serverless architecture (1 month pre-internship)
-- Calculate Price and Check Practicality: Use AWS Pricing Calculator to estimate costs and adjust if needed (Month 1).
-- Fix Architecture for Cost or Solution Fit: Tweak the design (e.g., optimize Lambda with Next.js) to stay cost-effective and usable (Month 2).
-- Develop, Test, and Deploy: Code the Raspberry Pi setup, AWS services with CDK/SDK, and Next.js app, then test and release to production (Months 2-3).
+### 3.1. Technical Objectives
 
-**Technical Requirements**
-- Weather Edge Station: Sensors (temperature, humidity, rainfall, wind speed), a microcontroller (ESP32), and a Raspberry Pi as the edge device. Raspberry Pi runs Raspbian, handles Docker for filtering, and sends 1 MB/day per station via MQTT over Wi-Fi.
-- Weather Platform: Practical knowledge of AWS Amplify (hosting Next.js), Lambda (minimal use due to Next.js), AWS Glue (ETL), S3 (two buckets), IoT Core (gateway and rules), and Cognito (5 users). Use AWS CDK/SDK to code interactions (e.g., IoT Core rules to S3). Next.js reduces Lambda workload for the fullstack web app.
+- Build an EIA API collector supporting pagination, timeouts, and bounded retries.
+- Separate respondent, metric, and time parameters from source code.
+- Validate required fields, data types, duplicate keys, and hourly completeness.
+- Store data in Amazon S3 using a structure suitable for queries.
+- Use Amazon Athena to analyze the data.
+- Configure scheduled execution, logging, and failure alerts.
+- Deploy AWS resources using AWS SAM.
 
-### 5. Timeline & Milestones
-**Project Timeline**
-- Pre-Internship (Month 0): 1 month for planning and old station review.
-- Internship (Months 1-3): 3 months.
-    - Month 1: Study AWS and upgrade hardware.
-    - Month 2: Design and adjust architecture.
-    - Month 3: Implement, test, and launch.
-- Post-Launch: Up to 1 year for research.
+### 3.2. Analytical Objectives
 
-### 6. Budget Estimation
-You can find the budget estimation on the [AWS Pricing Calculator](https://calculator.aws/#/estimate?id=621f38b12a1ef026842ba2ddfe46ff936ed4ab01).  
-Or you can download the [Budget Estimation File](../attachments/budget_estimation.pdf).
+- Identify hours with high electricity demand.
+- Compare actual demand with the day-ahead forecast.
+- Calculate forecast errors using MAE and WAPE.
+- Observe changes in demand and net generation over time.
 
-### Infrastructure Costs
-- AWS Services:
-    - AWS Lambda: $0.00/month (1,000 requests, 512 MB storage).
-    - S3 Standard: $0.15/month (6 GB, 2,100 requests, 1 GB scanned).
-    - Data Transfer: $0.02/month (1 GB inbound, 1 GB outbound).
-    - AWS Amplify: $0.35/month (256 MB, 500 ms requests).
-    - Amazon API Gateway: $0.01/month (2,000 requests).
-    - AWS Glue ETL Jobs: $0.02/month (2 DPUs).
-    - AWS Glue Crawlers: $0.07/month (1 crawler).
-    - MQTT (IoT Core): $0.08/month (5 devices, 45,000 messages).
+DF forecasts are supplied by EIA, not generated by a model trained by this project.
 
-Total: $0.7/month, $8.40/12 months
+## 4. Project Scope
 
-- Hardware: $265 one-time (Raspberry Pi 5 and sensors).
+| Component | Scope |
+| --- | --- |
+| Data source | EIA Open Data API |
+| API route | `electricity/rto/region-data/data/` |
+| Initial respondent | CISO |
+| Metrics | D, DF, and NG |
+| Resolution | Hourly |
+| Processing time zone | UTC |
+| Test datasets | September 2026 and September 1–7, 2026 |
+| Proposed historical coverage | Up to 12 months, collected in smaller windows |
+| Proposed scheduled updates | Daily, with a recent-window refresh to capture source revisions |
+| Deployment method | AWS SAM |
 
-### 7. Risk Assessment
-#### Risk Matrix
-- Network Outages: Medium impact, medium probability.
-- Sensor Failures: High impact, low probability.
-- Cost Overruns: Medium impact, low probability.
+The 12-month historical window is a proposed extension and may be adjusted after evaluating API behavior and actual costs.
 
-#### Mitigation Strategies
-- Network: Local storage on Raspberry Pi with Docker.
-- Sensors: Regular checks and spares.
-- Cost: AWS budget alerts and optimization.
+The project uses aggregate U.S. electricity data. It does not represent Vietnamese electricity data or isolate electricity consumption by AI data centers.
 
-#### Contingency Plans
-- Revert to manual methods if AWS fails.
-- Use CloudFormation for cost-related rollbacks.
+Training a forecasting model and processing second-level streaming data are outside the initial scope.
 
-### 8. Expected Outcomes
-#### Technical Improvements: 
-Real-time data and analytics replace manual processes.  
-Scalable to 10-15 stations.
-#### Long-term Value
-1-year data foundation for AI research.  
-Reusable for future projects.
+## 5. Proposed Solution Architecture
+
+The system is expected to be deployed in the Singapore Region (`ap-southeast-1`).
+
+| Service / Tool | Role |
+| --- | --- |
+| Amazon EventBridge Scheduler | Trigger scheduled collection tasks |
+| AWS Lambda | Call the API, validate records, and standardize data |
+| Amazon S3 | Store original data, clean data, rejected data, and reports |
+| AWS Glue Data Catalog | Manage table metadata for queries |
+| Amazon Athena | Query and analyze clean data |
+| Amazon CloudWatch | Store logs, monitor execution metrics, and provide failure alarms |
+| AWS Systems Manager Parameter Store | Store the EIA API key as a SecureString |
+| AWS IAM | Manage access permissions for each component |
+| AWS SAM / AWS CloudFormation | Define and deploy infrastructure as code |
+
+Within the initial scope, AWS Glue is used for the Data Catalog. Glue ETL jobs are not currently planned.
+
+### Processing Flow
+
+1. EventBridge Scheduler triggers a Lambda task according to the schedule.
+2. Lambda reads the configuration and API key, then retrieves EIA API pages.
+3. Original data is stored in the S3 `raw/` area without saving the API key or URLs containing it.
+4. Validation evaluates the structure, values, keys, and completeness.
+5. Valid data is standardized and stored in `clean/`.
+6. Rejected data is stored in `quarantine/` with a report and is excluded from the clean dataset.
+7. Glue Data Catalog describes the data for Athena queries.
+8. Analytical outputs are stored in `reports/` and used to generate charts.
+9. CloudWatch records execution status, record counts, and errors.
+
+Clean data is expected to be partitioned by respondent and UTC date, using Parquet to support queries.
+
+Lambda is expected to access the public API without a VPC attachment. The initial architecture does not require EC2, a NAT Gateway, or a VPN.
+
+An architecture diagram using official AWS icons will be added after the design is finalized.
+
+## 6. Data Quality Validation
+
+The business key is defined as:
+
+`period + respondent + type`
+
+Validation rules include:
+
+- Required fields are present.
+- Values can be converted to finite numbers.
+- Respondents and metrics match the configuration.
+- Units match the source dataset.
+- Timestamps follow the required format and fall within the requested period.
+- Business keys are unique.
+- Every expected hour, respondent, and metric combination is present.
+- No unexpected combinations occur.
+
+Missing values are not automatically replaced with zero. During scheduled execution, the system must account for source publication timing to distinguish unpublished data from collection failures.
+
+### Reprocessing Behavior
+
+- Retain original data by collection run for comparison.
+- Update clean data by business key or replace validated daily partitions.
+- Avoid uncontrolled data appends.
+- Support reloading failed periods or revised source data.
+
+## 7. Analysis and Deliverables
+
+### Analytical Questions
+
+- Which hours have the highest electricity demand?
+- How much does actual demand differ from the forecast?
+- How does forecast error vary by date and hour?
+- How do electricity demand and net generation change over time?
+
+### Analytical Metrics
+
+- **MAE:** The mean absolute error between actual demand and forecast demand.
+- **WAPE:** The sum of absolute errors divided by the sum of absolute actual values, multiplied by 100%. A zero denominator is handled separately.
+
+These metrics describe differences in the supplied data. They do not establish causes or determine forecast quality under all conditions.
+
+### Proposed Deliverables
+
+- Source repository and README.
+- Sample configurations for different collection periods.
+- AWS SAM template.
+- Original data, clean data, and quality reports.
+- Athena SQL queries.
+- Charts showing demand and forecast errors.
+- Test reports.
+- Vietnamese and English workshop documentation.
+- Deployment, operation, and resource cleanup instructions.
+
+Source repository:
+
+[electricity-data-pipeline](https://github.com/pb110105/electricity-data-pipeline)
+
+## 8. Current Progress
+
+### Completed
+
+- Built a PowerShell pipeline covering collection, quality validation, and analysis.
+- Integrated the steps into a single execution command.
+- Created JSON configurations and the `-ConfigPath` parameter.
+- Successfully tested 2,160 records for September 2026.
+- Successfully tested 504 records for September 1–7, 2026.
+- Verified detection of duplicate and missing records.
+- Verified that the pipeline stops when the configuration file does not exist.
+- Exported quality reports and forecast comparison results.
+- Managed source code using Git and published the repository and README to GitHub.
+- Installed the AWS CLI and AWS SAM CLI.
+
+### Not Yet Completed
+
+- Confirm AWS CLI authentication and permissions.
+- Port processing logic to Python for Lambda.
+- Add pagination and retry handling.
+- Complete the architecture diagram and cost estimate.
+- Deploy project resources to AWS.
+- Configure scheduling, Athena queries, and monitoring.
+
+## 9. Implementation Plan
+
+| Phase | Main Activities | Completion Criteria |
+| --- | --- | --- |
+| 1. Finalize the design | Confirm scope, architecture, permissions, and cost | Documented design and clear cost assumptions |
+| 2. Prepare AWS code | Port logic to Python; add pagination, timeouts, and retries | Correct handling of valid data and failure scenarios |
+| 3. Trial deployment | Write the SAM template; create S3, Lambda, and the secret parameter | One successful AWS collection run with validated data |
+| 4. Analysis and operation | Configure Data Catalog, Athena, Scheduler, and CloudWatch | Query outputs and verified scheduled execution |
+| 5. Complete documentation | Test reprocessing; add charts, documentation, and cleanup procedures | Execution evidence and reproducible instructions |
+
+The remaining phases are provisionally estimated to take 3–4 weeks, subject to test results and actual availability.
+
+## 10. Budget and Cost Control
+
+An AWS Pricing Calculator estimate has not yet been validated.
+
+The initial trial budget target is **USD 10–15**. This is a planning limit, not a calculated or guaranteed cost.
+
+Before deployment, costs must be estimated for the Singapore Region based on:
+
+- Lambda execution frequency, memory, and duration.
+- S3 storage volume, requests, and retention.
+- Data scanned by Athena.
+- Logging, monitoring, and secret parameter storage.
+- Additional resources created during deployment.
+
+Cost controls include:
+
+- Enable scheduled execution only when needed.
+- Limit collection windows and retry attempts.
+- Use partitions and Parquet.
+- Configure Athena workgroup scan limits.
+- Set suitable CloudWatch Logs retention and S3 lifecycle rules.
+- Check actual Bills and remaining credits before deployment.
+- Disable schedules and clean up resources after testing.
+
+Free Tier and credits are not assumed to cover all services. AWS Budgets provides alerts and does not automatically stop every resource.
+
+## 11. Risks and Mitigation
+
+| Risk | Proposed Mitigation |
+| --- | --- |
+| API outage or rate limiting | Timeouts, bounded retries, backoff, and backfilling failed periods |
+| Delayed data publication | Apply a collection delay and check again |
+| Source data revisions | Refresh a recent window and retain original data for comparison |
+| Duplicate data during reruns | Enforce business keys and replace partitions with validation |
+| API key exposure | Use SecureString and restricted IAM permissions; do not commit keys or log URLs containing keys |
+| Unexpected costs | Estimate costs beforehand, limit schedules and scans, and clean up resources |
+
+## 12. Acceptance Criteria
+
+- Collect all available data within the configured scope, with pagination support.
+- Detect missing records, duplicates, and invalid formats.
+- Prevent rejected data from entering the clean dataset.
+- Reruns do not increase duplicate records.
+- Produce quality reports and analytical results.
+- Query clean data using Athena.
+- Verify scheduled execution and error recording.
+- Recreate the deployment using AWS SAM.
+- Provide cleanup instructions and post-testing cost checks.
+
+## 13. References
+
+- [EIA Open Data](https://www.eia.gov/opendata/)
+- [EIA API Documentation](https://www.eia.gov/opendata/documentation.php)
+- [EIA Electric Grid Monitor](https://www.eia.gov/electricity/gridmonitor/)
+- [AWS Serverless Application Model](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html)
+- [AWS Serverless Data Analytics Pipeline Reference Architecture](https://aws.amazon.com/blogs/big-data/aws-serverless-data-analytics-pipeline-reference-architecture/)
+- [AWS Pricing Calculator](https://calculator.aws/)
