@@ -207,30 +207,26 @@ The remaining phases are provisionally estimated to take 3–4 weeks, subject to
 
 ## 10. Budget and Cost Control
 
-An AWS Pricing Calculator estimate has not yet been validated.
+### Cost Estimate
 
-The initial trial budget target is **USD 10–15**. This is a planning limit, not a calculated or guaranteed cost.
+The estimate was prepared using AWS Pricing Calculator for Asia Pacific (Singapore), based on the following trial workload:
 
-Before deployment, costs must be estimated for the Singapore Region based on:
+- AWS Lambda: 1,000 invocations/month, 512 MB memory, and an assumed average duration of 60 seconds/invocation.
+- Amazon S3: 1 GB storage, 10,000 write/list requests, and 10,000 read requests/month.
+- Amazon Athena: 100 queries/month, scanning approximately 0.1 GB/query.
+- Amazon CloudWatch: 0.1 GB of logs/month and 1 standard alarm.
+- AWS Glue Data Catalog: 1,000 objects and 10,000 access requests/month; no Glue ETL jobs or crawlers.
+- Amazon EventBridge Scheduler: 30 invocations/month.
+- AWS Systems Manager Parameter Store: 1 Standard parameter and 1,000 API interactions/month.
+- AWS KMS: 1,000 symmetric requests/month, using the default AWS managed key for Parameter Store.
 
-- Lambda execution frequency, memory, and duration.
-- S3 storage volume, requests, and retention.
-- Data scanned by Athena.
-- Logging, monitoring, and secret parameter storage.
-- Additional resources created during deployment.
+**The Calculator displays approximately USD 0.32/month, equivalent to USD 3.84 over 12 months, with no upfront cost.**
 
-Cost controls include:
+The estimate includes Free Tier allowances where applied by the Calculator, including Lambda. It is based on the assumptions above, excludes taxes, and does not represent a spending limit. Actual costs may change with data growth, pipeline reruns, or configuration changes. Existing lab resources are excluded from this estimate.
 
-- Enable scheduled execution only when needed.
-- Limit collection windows and retry attempts.
-- Use partitions and Parquet.
-- Configure Athena workgroup scan limits.
-- Set suitable CloudWatch Logs retention and S3 lifecycle rules.
-- Check actual Bills and remaining credits before deployment.
-- Disable schedules and clean up resources after testing.
+A separate **USD 10–15 contingency budget** is planned for the trial phase.
 
-Free Tier and credits are not assumed to cover all services. AWS Budgets provides alerts and does not automatically stop every resource.
-
+[AWS Pricing Calculator details](https://calculator.aws/#/estimate?id=b15d336bada5c522a1ed6521fac734952eeb4469)
 ## 11. Risks and Mitigation
 
 | Risk | Proposed Mitigation |

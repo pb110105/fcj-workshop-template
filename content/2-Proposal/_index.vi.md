@@ -207,29 +207,26 @@ Thời lượng dự kiến cho các giai đoạn tiếp theo là 3–4 tuần, 
 
 ## 10. Ngân sách và kiểm soát chi phí
 
-Chưa có ước tính AWS Pricing Calculator được xác nhận.
+### Dự toán chi phí
 
-Mục tiêu ngân sách thử nghiệm ban đầu là **10–15 USD**. Đây là giới hạn lập kế hoạch, không phải chi phí đã được tính toán hoặc cam kết.
+Dự toán được lập bằng AWS Pricing Calculator cho khu vực Asia Pacific (Singapore), với quy mô thử nghiệm:
 
-Trước khi triển khai, cần ước tính tại Region Singapore dựa trên:
+- AWS Lambda: 1.000 lượt gọi/tháng, bộ nhớ 512 MB, thời gian chạy trung bình giả định 60 giây/lượt.
+- Amazon S3: 1 GB lưu trữ, 10.000 yêu cầu ghi/liệt kê và 10.000 yêu cầu đọc/tháng.
+- Amazon Athena: 100 truy vấn/tháng, mỗi truy vấn quét khoảng 0,1 GB.
+- Amazon CloudWatch: 0,1 GB log/tháng và 1 cảnh báo tiêu chuẩn.
+- AWS Glue Data Catalog: 1.000 đối tượng và 10.000 lượt truy cập/tháng; không sử dụng Glue ETL hoặc crawler.
+- Amazon EventBridge Scheduler: 30 lượt kích hoạt/tháng.
+- AWS Systems Manager Parameter Store: 1 Standard parameter, 1.000 lượt tương tác/tháng.
+- AWS KMS: 1.000 yêu cầu đối xứng/tháng, sử dụng khóa AWS quản lý mặc định cho Parameter Store.
 
-- Số lần chạy, bộ nhớ và thời gian thực thi Lambda.
-- Dung lượng, số request và thời gian lưu dữ liệu trên S3.
-- Lượng dữ liệu Athena quét.
-- Chi phí log, giám sát và lưu tham số bí mật.
-- Các tài nguyên phát sinh từ quá trình triển khai.
+**Chi phí hiển thị trên Calculator: khoảng 0,32 USD/tháng, tương đương 3,84 USD/12 tháng; chi phí ban đầu là 0 USD.**
 
-Biện pháp kiểm soát:
+Dự toán áp dụng Free Tier tại các hạng mục được Calculator hỗ trợ, bao gồm Lambda. Đây là ước tính theo các giả định trên, chưa bao gồm thuế và không phải mức trần chi phí. Chi phí thực tế có thể thay đổi khi tăng dữ liệu, chạy lại pipeline hoặc thay đổi cấu hình. Chi phí tài nguyên lab cũ không nằm trong dự toán này.
 
-- Chỉ bật lịch chạy khi cần.
-- Giới hạn khoảng dữ liệu và số lần thử lại.
-- Sử dụng phân vùng và Parquet.
-- Thiết lập giới hạn quét cho Athena workgroup.
-- Cấu hình thời hạn lưu CloudWatch Logs và vòng đời dữ liệu S3.
-- Kiểm tra Bills và lượng credit thực tế trước khi triển khai.
-- Tắt lịch và dọn tài nguyên sau khi kết thúc thử nghiệm.
+Ngân sách dự phòng cho giai đoạn thử nghiệm: **10–15 USD**, theo dõi riêng với chi phí vận hành ước tính.
 
-Không mặc định Free Tier hoặc credit sẽ chi trả toàn bộ dịch vụ. AWS Budget là công cụ cảnh báo, không tự động dừng mọi tài nguyên.
+[Chi tiết AWS Pricing Calculator](https://calculator.aws/#/estimate?id=b15d336bada5c522a1ed6521fac734952eeb4469)
 
 ## 11. Rủi ro và phương án xử lý
 
