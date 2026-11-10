@@ -18,11 +18,11 @@ pre: "<b>1.5.</b>"
 
 | Day | Tasks | Start Date | Completion Date | References |
 |---|---|---|---|---|
-| Monday | Explore AWS automation and monitoring services, including Amazon EventBridge Scheduler, AWS Lambda, and Amazon CloudWatch. | 02/11/2026 | 02/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Tuesday | Study AWS configuration management, security, and storage services, including AWS Systems Manager Parameter Store, AWS KMS, and Amazon S3. | 03/11/2026 | 03/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Wednesday | Learn about Amazon CloudWatch architecture and features. Practice monitoring CloudWatch Metrics and collecting and analyzing data using CloudWatch Logs. | 04/11/2026 | 04/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thursday | Practice configuring CloudWatch Alarms, explore CloudWatch Dashboards, and clean up AWS resources after completing the hands-on exercises. | 05/11/2026 | 05/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Friday | Review AWS Access Key security best practices, including key management and deletion. Explore Performance Efficiency in the AWS Well-Architected Framework and AWS cost estimation methods. | 06/11/2026 | 06/11/2026 | [AWS Learning Resources](https://www.youtube.com/watch?v=2cRLnzu3kYc) |
+| 2 | Explore AWS automation and monitoring services, including Amazon EventBridge Scheduler, AWS Lambda, and Amazon CloudWatch. | 02/11/2026 | 02/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 3 | Study AWS configuration management, security, and storage services, including AWS Systems Manager Parameter Store, AWS KMS, and Amazon S3. | 03/11/2026 | 03/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 4 | Learn about Amazon CloudWatch architecture and features. Practice monitoring CloudWatch Metrics and collecting and analyzing data using CloudWatch Logs. | 04/11/2026 | 04/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 5 | Practice configuring CloudWatch Alarms, explore CloudWatch Dashboards, and clean up AWS resources after completing the hands-on exercises. | 05/11/2026 | 05/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 6 | Review AWS Access Key security best practices, including key management and deletion. Explore Performance Efficiency in the AWS Well-Architected Framework and AWS cost estimation methods. | 06/11/2026 | 06/11/2026 | [AWS Learning Resources](https://www.youtube.com/watch?v=2cRLnzu3kYc) |
 
 ### Week 5 Achievements:
 

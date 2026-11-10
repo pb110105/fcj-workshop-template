@@ -19,11 +19,11 @@ pre: "<b>1.1.</b>"
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
 |---|---|---|---|---|
-| Thứ Hai | Làm quen với AWS Management Console. Tạo tài khoản AWS và tìm hiểu AWS Budgets, AWS Support, IAM, VPC và Subnet. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Ba | Tạo Internet Gateway, cấu hình Route Table và Security Group. Kích hoạt VPC Flow Logs để ghi nhận thông tin lưu lượng mạng. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Tư | Triển khai EC2 Public và EC2 Private, cấu hình NAT Gateway, kiểm tra kết nối và tìm hiểu Reachability Analyzer, EC2 Instance Connect Endpoint và Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Năm | Xây dựng môi trường mạng mô phỏng On-Premises, cấu hình AWS Site-to-Site VPN, Virtual Private Gateway, Customer Gateway và VPN Tunnel. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Sáu | Tìm hiểu giao thức IKEv2 và các phương án cấu hình VPN. Nghiên cứu ý tưởng cho dự án cá nhân. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 2 | Làm quen với AWS Management Console. Tạo tài khoản AWS và tìm hiểu AWS Budgets, AWS Support, IAM, VPC và Subnet. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 3 | Tạo Internet Gateway, cấu hình Route Table và Security Group. Kích hoạt VPC Flow Logs để ghi nhận thông tin lưu lượng mạng. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 4 | Triển khai EC2 Public và EC2 Private, cấu hình NAT Gateway, kiểm tra kết nối và tìm hiểu Reachability Analyzer, EC2 Instance Connect Endpoint và Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 5 | Xây dựng môi trường mạng mô phỏng On-Premises, cấu hình AWS Site-to-Site VPN, Virtual Private Gateway, Customer Gateway và VPN Tunnel. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 6 | Tìm hiểu giao thức IKEv2 và các phương án cấu hình VPN. Nghiên cứu ý tưởng cho dự án cá nhân. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
 
 ### Kết quả đạt được trong tuần 1:
 

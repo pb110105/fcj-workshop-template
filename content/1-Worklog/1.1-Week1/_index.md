@@ -19,11 +19,11 @@ pre: "<b>1.1.</b>"
 
 | Day | Tasks | Start Date | Completion Date | References |
 |---|---|---|---|---|
-| Monday | Explore the AWS Management Console. Create an AWS account and learn about AWS Budgets, AWS Support, IAM, VPCs, and subnets. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Tuesday | Create an Internet Gateway, configure route tables and security groups, and enable VPC Flow Logs. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Wednesday | Deploy public and private EC2 instances, configure a NAT Gateway, test connectivity, and explore Reachability Analyzer, EC2 Instance Connect Endpoint, and Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thursday | Create a simulated on-premises environment and configure AWS Site-to-Site VPN, Virtual Private Gateway, Customer Gateway, and VPN tunnels. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Friday | Explore IKEv2 and alternative VPN configurations. Research potential ideas for an individual project. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 2 | Explore the AWS Management Console. Create an AWS account and learn about AWS Budgets, AWS Support, IAM, VPCs, and subnets. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 3 | Create an Internet Gateway, configure route tables and security groups, and enable VPC Flow Logs. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 4 | Deploy public and private EC2 instances, configure a NAT Gateway, test connectivity, and explore Reachability Analyzer, EC2 Instance Connect Endpoint, and Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 5| Create a simulated on-premises environment and configure AWS Site-to-Site VPN, Virtual Private Gateway, Customer Gateway, and VPN tunnels. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| 6 | Explore IKEv2 and alternative VPN configurations. Research potential ideas for an individual project. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
 
 ### Week 1 Achievements:
 
