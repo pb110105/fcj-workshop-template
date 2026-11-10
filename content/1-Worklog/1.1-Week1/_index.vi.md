@@ -1,154 +1,80 @@
+
 ---
 title: "Worklog Tuần 1"
 date: 2026-10-05
 weight: 1
 chapter: false
-pre: " <b> 1.1. </b> "
+pre: "<b>1.1.</b>"
 ---
 
-### Mục tiêu tuần 1
+### Mục tiêu tuần 1:
 
-- Làm quen với AWS Management Console và các công cụ quản lý tài nguyên AWS.
-- Tìm hiểu các dịch vụ cơ bản về quản lý chi phí, quản lý truy cập và mạng.
-- Thực hành xây dựng mạng VPC, triển khai EC2 và thiết lập kết nối VPN Site-to-Site.
+- Làm quen với AWS Management Console và các dịch vụ cơ bản của AWS.
+- Tìm hiểu về quản lý chi phí, quản lý danh tính và quyền truy cập (IAM), cũng như hệ thống mạng trên AWS.
+- Hiểu các thành phần chính của Amazon VPC, bao gồm Subnet, Route Table, Internet Gateway, NAT Gateway và Security Group.
+- Thực hành triển khai Amazon EC2 và xử lý các sự cố kết nối mạng.
+- Tìm hiểu AWS Site-to-Site VPN và phương thức kết nối an toàn giữa các hệ thống mạng.
 
-### Công việc thực hiện
+### Các công việc cần triển khai trong tuần này:
 
-| Thứ | Nội dung công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
-| --- | --- | --- | --- | --- |
-| Thứ Hai | Tìm hiểu cách sử dụng AWS Management Console.<br>Tạo tài khoản AWS và tìm hiểu AWS Budgets, AWS Support, IAM, VPC và Subnet. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Ba | Tạo Internet Gateway, Route Table và Security Group.<br>Kích hoạt VPC Flow Logs để ghi nhận thông tin lưu lượng mạng. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Tư | Triển khai EC2 và kiểm tra kết nối.<br>Tạo NAT Gateway, sử dụng Reachability Analyzer và EC2 Instance Connect Endpoint.<br>Thực hành truy cập EC2 bằng AWS Systems Manager Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Năm | Tạo môi trường VPN và thiết lập kết nối AWS Site-to-Site VPN.<br>Cấu hình Customer Gateway và tùy chỉnh VPN Tunnel. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
-| Thứ Sáu | Tìm hiểu cấu hình VPN thay thế và giao thức IKEv2.<br>Nghiên cứu các ý tưởng cho đề tài cá nhân. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Tài liệu tham khảo |
+|---|---|---|---|---|
+| Thứ Hai | Làm quen với AWS Management Console. Tạo tài khoản AWS và tìm hiểu AWS Budgets, AWS Support, IAM, VPC và Subnet. | 05/10/2026 | 05/10/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| Thứ Ba | Tạo Internet Gateway, cấu hình Route Table và Security Group. Kích hoạt VPC Flow Logs để ghi nhận thông tin lưu lượng mạng. | 06/10/2026 | 06/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| Thứ Tư | Triển khai EC2 Public và EC2 Private, cấu hình NAT Gateway, kiểm tra kết nối và tìm hiểu Reachability Analyzer, EC2 Instance Connect Endpoint và Session Manager. | 07/10/2026 | 07/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| Thứ Năm | Xây dựng môi trường mạng mô phỏng On-Premises, cấu hình AWS Site-to-Site VPN, Virtual Private Gateway, Customer Gateway và VPN Tunnel. | 08/10/2026 | 08/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
+| Thứ Sáu | Tìm hiểu giao thức IKEv2 và các phương án cấu hình VPN. Nghiên cứu ý tưởng cho dự án cá nhân. | 09/10/2026 | 09/10/2026 | [Networking Essentials with VPC](https://000003.awsstudygroup.com/) |
 
-### Kết quả đạt được
+### Kết quả đạt được trong tuần 1:
 
-#### 1. Tài khoản AWS và quản lý chi phí
+**1. Thiết lập tài khoản AWS và quản lý chi phí**
 
 - Tạo tài khoản AWS và đăng nhập thành công vào AWS Management Console.
-- Làm quen với giao diện Console Home và chức năng tìm kiếm dịch vụ.
-- Tạo **My Zero-Spend Budget** để theo dõi chi phí.
-- Tại thời điểm kiểm tra, Budget hiển thị trạng thái **OK**, chi phí **0 USD**; email nhận thông báo vẫn đang chờ xác minh.
-- Gửi AWS Support case về lỗi xác minh email nhận thông báo Budget.
+- Làm quen với giao diện quản lý và cách tìm kiếm các dịch vụ AWS.
+- Tạo ngân sách **My Zero-Spend Budget** để theo dõi chi phí sử dụng tài nguyên.
+- Kiểm tra trạng thái ngân sách hiển thị **OK**, với chi phí ghi nhận tại thời điểm kiểm tra là **0 USD**.
+- Gửi yêu cầu hỗ trợ đến AWS Support để xử lý sự cố xác minh email nhận thông báo ngân sách.
 
-**Minh họa AWS Budget:**
+**2. Quản lý danh tính và quyền truy cập (IAM)**
 
-![AWS Budget đã tạo; email nhận thông báo đang chờ xác minh](/fcj-workshop-template/images/week1/budget.png)
+- Tìm hiểu về IAM User, IAM Role và IAM Policy.
+- Thực hành phân quyền thông qua chính sách **AdministratorAccess**.
+- Hiểu được vai trò của IAM trong quản lý quyền truy cập và bảo mật tài nguyên AWS.
 
-**Minh họa AWS Support case:**
+**3. Xây dựng hệ thống mạng Amazon VPC**
 
-![Gửi yêu cầu hỗ trợ đến AWS Support](/fcj-workshop-template/images/week1/support.png)
+- Tạo VPC và các Public Subnet, Private Subnet.
+- Tạo và gắn Internet Gateway vào VPC.
+- Cấu hình Route Table để điều hướng lưu lượng mạng.
+- Thiết lập Security Group nhằm kiểm soát kết nối đến các tài nguyên.
+- Kích hoạt VPC Flow Logs để ghi nhận thông tin lưu lượng mạng.
+- Hiểu được vai trò và nguyên lý hoạt động của các thành phần mạng trong AWS.
 
-#### 2. Quản lý truy cập với IAM
+**4. Triển khai Amazon EC2 và kiểm tra kết nối**
 
-- Thực hành cấp quyền bằng policy **AdministratorAccess**.
+- Khởi tạo các EC2 Instance trong Public Subnet và Private Subnet.
+- Thực hành kết nối đến EC2 thông qua giao thức SSH.
+- Cấu hình NAT Gateway để cho phép EC2 Private truy cập Internet theo chiều đi ra.
+- Sử dụng Reachability Analyzer để kiểm tra và phân tích khả năng kết nối mạng.
+- Thực hành truy cập EC2 Private thông qua EC2 Instance Connect Endpoint.
+- Tìm hiểu và sử dụng AWS Systems Manager Session Manager để truy cập EC2.
+- Khắc phục lỗi **SSH Connection timed out** bằng cách điều chỉnh quy tắc truy cập trong Security Group.
 
-![Thực hành cấp quyền với AWS IAM](/fcj-workshop-template/images/week1/iam.png)
+**5. Thiết lập AWS Site-to-Site VPN**
 
-#### 3. Xây dựng mạng VPC
+- Xây dựng môi trường mạng mô phỏng hệ thống On-Premises.
+- Tạo VPC và EC2 Instance đóng vai trò Customer Gateway.
+- Cấu hình Virtual Private Gateway và Customer Gateway.
+- Tạo kết nối AWS Site-to-Site VPN.
+- Cài đặt và cấu hình Libreswan trên EC2 Customer Gateway.
+- Tìm hiểu các tùy chọn cấu hình VPN Tunnel và giao thức IKEv2.
+- Thực hành xử lý sự cố kết nối ICMP bằng cách điều chỉnh Security Group.
 
-Thực hành các thành phần mạng trong bài lab **Networking Essentials with Amazon VPC**:
+**6. Kiến thức và kinh nghiệm tích lũy**
 
-- Tạo VPC và các Subnet.
-- Tạo Internet Gateway và gắn vào VPC.
-- Cấu hình Route Table.
-- Tạo Security Group.
-- Kích hoạt VPC Flow Logs.
-
-**Tạo VPC:**
-
-![Tạo VPC](/fcj-workshop-template/images/week1/createVPC.png)
-
-**Tạo Subnet:**
-
-![Tạo Subnet](/fcj-workshop-template/images/week1/subnet.png)
-
-**Tạo Internet Gateway:**
-
-![Tạo Internet Gateway](/fcj-workshop-template/images/week1/ig.png)
-
-**Cấu hình Route Table:**
-
-![Cấu hình Route Table](/fcj-workshop-template/images/week1/route.png)
-
-**Tạo Security Group:**
-
-![Tạo Security Group](/fcj-workshop-template/images/week1/sg.png)
-
-**Kích hoạt VPC Flow Logs:**
-
-![Kích hoạt VPC Flow Logs](/fcj-workshop-template/images/week1/flowlog.png)
-
-#### 4. Triển khai EC2 và kiểm tra kết nối
-
-- Triển khai EC2 Public và EC2 Private.
-- Thực hành kết nối SSH và kiểm tra kết nối giữa các máy.
-- Tạo NAT Gateway để EC2 Private có thể truy cập Internet.
-- Thực hành sử dụng Reachability Analyzer.
-- Thực hành truy cập EC2 Private bằng EC2 Instance Connect Endpoint và AWS Systems Manager Session Manager.
-
-**Triển khai EC2:**
-
-![Triển khai EC2](/fcj-workshop-template/images/week1/ec2.png)
-
-**Kiểm tra kết nối:**
-
-![Kiểm tra kết nối EC2](/fcj-workshop-template/images/week1/testConnection.png)
-
-**Tạo NAT Gateway:**
-
-![Tạo NAT Gateway](/fcj-workshop-template/images/week1/nat.png)
-
-**Sử dụng Reachability Analyzer:**
-
-![Sử dụng Reachability Analyzer](/fcj-workshop-template/images/week1/ra.png)
-
-**Truy cập bằng Session Manager:**
-
-![Truy cập EC2 bằng AWS Systems Manager Session Manager](/fcj-workshop-template/images/week1/manager.png)
-
-#### 5. Thiết lập VPN Site-to-Site
-
-- Tạo VPC mô phỏng môi trường on-premises và EC2 làm Customer Gateway.
-- Tạo Virtual Private Gateway, Customer Gateway và VPN Connection.
-- Cấu hình Libreswan trên máy Customer Gateway.
-- Tùy chỉnh VPN Tunnel và tìm hiểu cấu hình IKEv2.
-
-**Tạo môi trường VPN:**
-
-![Tạo VPC cho môi trường VPN](/fcj-workshop-template/images/week1/vpcvpn.png)
-
-![Tạo EC2 làm Customer Gateway](/fcj-workshop-template/images/week1/ec2vpn.png)
-
-**Tạo các thành phần kết nối:**
-![Tạo Virtual Private Gateway](/fcj-workshop-template/images/week1/vpg.png)
-
-![Tạo Customer Gateway](/fcj-workshop-template/images/week1/customergateway.png)
-
-![Tạo VPN Connection](/fcj-workshop-template/images/week1/createVPNconnection.png)
-
-**Cấu hình và kiểm tra VPN:**
-
-![Cấu hình Customer Gateway](/fcj-workshop-template/images/week1/customerGatewayConfiguration.png)
-
-![Tùy chỉnh AWS VPN Tunnel](/fcj-workshop-template/images/week1/vpntunnel.png)
-
-![Thực hành cấu hình IKEv2](/fcj-workshop-template/images/week1/ikiev2.png)
-
-### Khó khăn và cách xử lý
-
-| Vấn đề gặp phải | Cách xử lý |
-| --- | --- |
-| Liên kết xác minh email nhận thông báo Budget hiển thị “Page not found”. | Kiểm tra tài khoản, thử gửi lại email xác minh và gửi AWS Support case. Chưa xác nhận lỗi đã được giải quyết. |
-| Kết nối SSH bị “Connection timed out”. | Kiểm tra Security Group và cập nhật nguồn của rule SSH thành địa chỉ My IP hiện tại. |
-| EC2 Private không phản hồi ping từ mạng Customer Gateway. | Bổ sung rule ICMP cho nguồn `10.11.0.0/16` trong Security Group của EC2 Private, sau đó kiểm tra lại. |
-| Không tìm thấy gói StrongSwan trong kho phần mềm đang sử dụng trên Amazon Linux 2023. | Thực hành IKEv2 bằng Libreswan đã cài đặt; chưa thực hành triển khai StrongSwan. |
-
-### Kiến thức rút ra
-
-- Hiểu vai trò của VPC, Subnet, Route Table, Internet Gateway và NAT Gateway.
-- Biết kiểm tra kết nối dựa trên Security Group, cấu hình định tuyến và trạng thái VPN Tunnel.
-- Phân biệt các phương thức truy cập EC2: SSH, EC2 Instance Connect Endpoint và Session Manager.
-- Hiểu rằng AWS Budget là công cụ cảnh báo chi phí, không tự động dừng toàn bộ tài nguyên.
-- Nhận thức được việc bảo vệ khóa SSH và khóa PSK, tránh đưa thông tin bí mật vào báo cáo hoặc repository.
+- Nắm được kiến thức nền tảng về điện toán đám mây và kiến trúc mạng trên AWS.
+- Hiểu cách triển khai và quản lý các tài nguyên cơ bản trong môi trường AWS.
+- Nâng cao kỹ năng cấu hình VPC, EC2, NAT Gateway và các thành phần mạng.
+- Biết cách kiểm tra và xử lý các sự cố liên quan đến kết nối mạng, định tuyến và Security Group.
+- Hiểu tầm quan trọng của việc giám sát chi phí và bảo mật tài nguyên AWS.
+- Có thêm kinh nghiệm thực hành về các phương thức truy cập EC2 và cấu hình kết nối VPN.

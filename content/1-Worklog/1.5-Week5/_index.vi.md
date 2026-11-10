@@ -15,9 +15,9 @@ pre: " <b> 1.5. </b> "
 | --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------ | --------------- | ----------------------------------------- |
 | 2   | - Đọc tài liệu AWS <br>&emsp;  + Amazon Event Bridge Scheduler <br>&emsp; + Amazon Lambda <br>&emsp; +  Amazon Cloud Watch   | 02/11/2026   | 02/11/2026  | <https://cloudjourney.awsstudygroup.com/> |
 | 3   | - Đọc tài liệu về các công cụ của AWS  <br>&emsp; + Parameter Store <br>&emsp; + AWS KMS <br>&emsp; + Amazon S3   | 03/11/2026  | 03/11/2026    | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Tạo AWS Free Tier account <br> - Tìm hiểu AWS Console & AWS CLI <br> - **Thực hành:** <br>&emsp; + Tạo AWS account <br>&emsp; + Cài AWS CLI & cấu hình <br> &emsp; + Cách sử dụng AWS CLI | 13/08/2025   | 13/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Tìm hiểu EC2 cơ bản: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - Các cách remote SSH vào EC2 <br> - Tìm hiểu Elastic IP   <br>                  | 14/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Thực hành:** <br>&emsp; + Tạo EC2 instance <br>&emsp; + Kết nối SSH <br>&emsp; + Gắn EBS volume                                                                                         | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| 4   | - Đọc tài liệu AWS ClOUDWATCH <br> - Thực hành AWS CloudWatch <br> - Thực hiện CloudWatch Metrics <br> - Thực hành CloudWatch Logs| 4/11/2026   | 4/11/2026   | <https://cloudjourney.awsstudygroup.com/> |
+| 5   | - Thực hành CloudWatch Alarms  <br> - Thực hành CloudWatch Dashboards  <br> - Dọn dẹp tài nguyên hệ thống | 5/11/2026  | 5/11/2026     | <https://cloudjourney.awsstudygroup.com/> |
+| 6   | - Xem          | 15/08/2025   | 15/08/2025      | <https://cloudjourney.awsstudygroup.com/> |
 
 
 ### Kết quả đạt được tuần 5:
