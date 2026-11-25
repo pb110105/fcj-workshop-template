@@ -1,52 +1,43 @@
 ---
 title: "Week 6 Worklog"
-date: 2024-11-09
-weight: 1
+date: 2026-11-09
+weight: 6
 chapter: false
 pre: " <b> 1.6. </b> "
 ---
-### Week 6 Objectives:
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Week 6 Objectives
 
-### Tasks to be carried out this week:
-| Day | Task  | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+- Strengthen understanding of AWS infrastructure and AWS CLI configuration.
+- Explore data storage and permissions for the electricity data pipeline project.
+- Review the architecture before deployment.
 
+### Weekly Activities
 
-### Week 6 Achievements:
+| Day | Activities | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| Monday | - Study the differences between AWS Regions and Availability Zones.<br>- Review the reasons for selecting Singapore for the project. | 09/11/2026 | 09/11/2026 | [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) |
+| Tuesday | - Review the use of multiple AWS CLI profiles.<br>- Learn how to specify a profile and region when running commands. | 10/11/2026 | 10/11/2026 | [AWS CLI Configuration Files](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) |
+| Wednesday | - Learn how to organize Amazon S3 objects using prefixes.<br>- Review the proposed `raw/`, `clean/`, and `quarantine/` data zones for the project. | 11/11/2026 | 11/11/2026 | [Organizing Objects Using Prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) |
+| Thursday | - Read documentation about AWS Lambda execution roles.<br>- Identify the permissions Lambda is expected to need for writing data to S3 and sending logs. | 12/11/2026 | 12/11/2026 | [AWS Lambda Execution Role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) |
+| Friday | - Review the architecture diagram and document the role of each service.<br>- Summarize the preparation steps required before deployment with AWS SAM. | 13/11/2026 | 13/11/2026 | [AWS SAM Developer Guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) |
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Week 6 Achievements
 
-* Successfully created and configured an AWS Free Tier account.
+- Understand the differences between Regions and Availability Zones and the considerations for selecting a deployment region.
+- Strengthen understanding of AWS CLI profiles and region configuration.
+- Define the proposed S3 data zones:
+  - `raw/`: Original data from the EIA API.
+  - `clean/`: Validated and transformed data.
+  - `quarantine/`: Data that fails validation.
+- Understand the purpose of Lambda execution roles and the principle of granting only necessary permissions.
+- Review the architecture and identify the remaining preparation tasks before AWS deployment.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### Challenges and Next Steps
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
+- Distinguish deployment permissions from Lambda runtime permissions.
+- Continue reviewing documentation and list the permissions required by each component before writing the infrastructure configuration.
 
-* Used AWS CLI to perform basic operations such as:
+### End-of-Week Status
 
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+The week focused on strengthening knowledge and reviewing the design. No additional AWS resources were recorded as deployed for the project during this week.
