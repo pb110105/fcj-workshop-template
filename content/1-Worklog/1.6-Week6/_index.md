@@ -16,11 +16,11 @@ pre: " <b> 1.6. </b> "
 
 | Day | Activities | Start Date | Completion Date | References |
 | --- | --- | --- | --- | --- |
-| Monday | - Study the differences between AWS Regions and Availability Zones.<br>- Review the reasons for selecting Singapore for the project. | 09/11/2026 | 09/11/2026 | [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) |
-| Tuesday | - Review the use of multiple AWS CLI profiles.<br>- Learn how to specify a profile and region when running commands. | 10/11/2026 | 10/11/2026 | [AWS CLI Configuration Files](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) |
-| Wednesday | - Learn how to organize Amazon S3 objects using prefixes.<br>- Review the proposed `raw/`, `clean/`, and `quarantine/` data zones for the project. | 11/11/2026 | 11/11/2026 | [Organizing Objects Using Prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) |
-| Thursday | - Read documentation about AWS Lambda execution roles.<br>- Identify the permissions Lambda is expected to need for writing data to S3 and sending logs. | 12/11/2026 | 12/11/2026 | [AWS Lambda Execution Role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) |
-| Friday | - Review the architecture diagram and document the role of each service.<br>- Summarize the preparation steps required before deployment with AWS SAM. | 13/11/2026 | 13/11/2026 | [AWS SAM Developer Guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) |
+| 2 | - Study the differences between AWS Regions and Availability Zones.<br>- Review the reasons for selecting Singapore for the project. | 09/11/2026 | 09/11/2026 | [AWS Regions and Availability Zones](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html) |
+| 3 | - Review the use of multiple AWS CLI profiles.<br>- Learn how to specify a profile and region when running commands. | 10/11/2026 | 10/11/2026 | [AWS CLI Configuration Files](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html) |
+| 4 | - Learn how to organize Amazon S3 objects using prefixes.<br>- Review the proposed `raw/`, `clean/`, and `quarantine/` data zones for the project. | 11/11/2026 | 11/11/2026 | [Organizing Objects Using Prefixes](https://docs.aws.amazon.com/AmazonS3/latest/userguide/using-prefixes.html) |
+| 5 | - Read documentation about AWS Lambda execution roles.<br>- Identify the permissions Lambda is expected to need for writing data to S3 and sending logs. | 12/11/2026 | 12/11/2026 | [AWS Lambda Execution Role](https://docs.aws.amazon.com/lambda/latest/dg/lambda-intro-execution-role.html) |
+| 6 | - Review the architecture diagram and document the role of each service.<br>- Summarize the preparation steps required before deployment with AWS SAM. | 13/11/2026 | 13/11/2026 | [AWS SAM Developer Guide](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/what-is-sam.html) |
 
 ### Week 6 Achievements
 

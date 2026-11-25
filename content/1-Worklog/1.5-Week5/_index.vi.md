@@ -18,11 +18,11 @@ pre: "<b>1.5.</b>"
 
 | Thứ | Công việc | Ngày bắt đầu | Ngày hoàn thành | Nguồn tài liệu |
 |---|---|---|---|---|
-| Thứ Hai | Tìm hiểu các dịch vụ AWS phục vụ tự động hóa và giám sát hệ thống: Amazon EventBridge Scheduler, AWS Lambda và Amazon CloudWatch. | 02/11/2026 | 02/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Ba | Nghiên cứu các dịch vụ hỗ trợ quản lý cấu hình, bảo mật và lưu trữ: AWS Systems Manager Parameter Store, AWS KMS và Amazon S3. | 03/11/2026 | 03/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Tư | Tìm hiểu kiến trúc và chức năng của Amazon CloudWatch. Thực hành theo dõi CloudWatch Metrics và thu thập, kiểm tra dữ liệu bằng CloudWatch Logs. | 04/11/2026 | 04/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Năm | Thực hành cấu hình CloudWatch Alarms, tìm hiểu CloudWatch Dashboards và dọn dẹp các tài nguyên AWS sau khi hoàn thành bài thực hành. | 05/11/2026 | 05/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
-| Thứ Sáu | Tìm hiểu các lưu ý khi sử dụng AWS Access Key, cách quản lý và xóa Access Key an toàn. Nghiên cứu Performance Efficiency trong AWS Well-Architected Framework và phương pháp ước tính chi phí AWS. | 06/11/2026 | 06/11/2026 | [AWS Learning Resources](https://www.youtube.com/watch?v=2cRLnzu3kYc) |
+| 2 | Tìm hiểu các dịch vụ AWS phục vụ tự động hóa và giám sát hệ thống: Amazon EventBridge Scheduler, AWS Lambda và Amazon CloudWatch. | 02/11/2026 | 02/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 3 | Nghiên cứu các dịch vụ hỗ trợ quản lý cấu hình, bảo mật và lưu trữ: AWS Systems Manager Parameter Store, AWS KMS và Amazon S3. | 03/11/2026 | 03/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 4 | Tìm hiểu kiến trúc và chức năng của Amazon CloudWatch. Thực hành theo dõi CloudWatch Metrics và thu thập, kiểm tra dữ liệu bằng CloudWatch Logs. | 04/11/2026 | 04/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 5 | Thực hành cấu hình CloudWatch Alarms, tìm hiểu CloudWatch Dashboards và dọn dẹp các tài nguyên AWS sau khi hoàn thành bài thực hành. | 05/11/2026 | 05/11/2026 | [AWS Cloud Journey](https://cloudjourney.awsstudygroup.com/) |
+| 6 | Tìm hiểu các lưu ý khi sử dụng AWS Access Key, cách quản lý và xóa Access Key an toàn. Nghiên cứu Performance Efficiency trong AWS Well-Architected Framework và phương pháp ước tính chi phí AWS. | 06/11/2026 | 06/11/2026 | [AWS Learning Resources](https://www.youtube.com/watch?v=2cRLnzu3kYc) |
 
 ### Kết quả đạt được tuần 5:
 
