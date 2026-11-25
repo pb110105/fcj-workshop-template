@@ -1,57 +1,44 @@
 ---
 title: "Week 7 Worklog"
-date: 2024-01-01
-weight: 1
+date: 2026-11-16
+weight: 7
 chapter: false
 pre: " <b> 1.7. </b> "
 ---
-{{% notice warning %}} 
-⚠️ **Note:** The following information is for reference purposes only. Please **do not copy verbatim** for your own report, including this warning.
-{{% /notice %}}
 
+### Week 7 Objectives
 
-### Week 7 Objectives:
+- Learn how to adapt the Python pipeline for AWS Lambda.
+- Define an approach for API key management and scheduled data collection.
+- Prepare the deployment structure using AWS SAM.
 
-* Connect and get acquainted with members of First Cloud AI Journey.
-* Understand basic AWS services, how to use the console & CLI.
+### Weekly Activities
 
-### Tasks to be carried out this week:
-| Day | Task                                                                                                                                                                                                   | Start Date | Completion Date | Reference Material                        |
-| --- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------- | --------------- | ----------------------------------------- |
-| 2   | - Get acquainted with FCAJ members <br> - Read and take note of internship unit rules and regulations                                                                                                   | 08/11/2025 | 08/11/2025      |
-| 3   | - Learn about AWS and its types of services <br>&emsp; + Compute <br>&emsp; + Storage <br>&emsp; + Networking <br>&emsp; + Database <br>&emsp; + ... <br>                                              | 08/12/2025 | 08/12/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 4   | - Create AWS Free Tier account <br> - Learn about AWS Console & AWS CLI <br> - **Practice:** <br>&emsp; + Create AWS account <br>&emsp; + Install & configure AWS CLI <br> &emsp; + How to use AWS CLI | 08/13/2025 | 08/13/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 5   | - Learn basic EC2: <br>&emsp; + Instance types <br>&emsp; + AMI <br>&emsp; + EBS <br>&emsp; + ... <br> - SSH connection methods to EC2 <br> - Learn about Elastic IP   <br>                            | 08/14/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
-| 6   | - **Practice:** <br>&emsp; + Launch an EC2 instance <br>&emsp; + Connect via SSH <br>&emsp; + Attach an EBS volume                                                                                     | 08/15/2025 | 08/15/2025      | <https://cloudjourney.awsstudygroup.com/> |
+| Day | Activities | Start Date | Completion Date | References |
+| --- | --- | --- | --- | --- |
+| 2 | - Study the structure of a Python Lambda function.<br>- Identify the changes required to convert local scripts into a Lambda handler. | 16/11/2026 | 16/11/2026 | [Lambda Handler in Python](https://docs.aws.amazon.com/lambda/latest/dg/python-handler.html) |
+| 3 | - Learn how to store an API key using Parameter Store SecureString.<br>- Document how the application should retrieve the parameter and avoid exposing the API key in source code or logs. | 17/11/2026 | 17/11/2026 | [Parameter Store SecureString](https://docs.aws.amazon.com/systems-manager/latest/userguide/secure-string-parameter-kms-encryption.html) |
+| 4 | - Read the EventBridge Scheduler documentation.<br>- Define a daily pipeline schedule and plan to keep it disabled during testing. | 18/11/2026 | 18/11/2026 | [EventBridge Scheduler](https://docs.aws.amazon.com/scheduler/latest/UserGuide/what-is-scheduler.html) |
+| 5 | - Learn how Lambda sends logs to CloudWatch Logs.<br>- Identify information to record: execution time, record count, validation results, and errors. | 19/11/2026 | 19/11/2026 | [Lambda Logging with Python](https://docs.aws.amazon.com/lambda/latest/dg/python-logging.html) |
+| 6 | - Study the basic structure of an AWS SAM template.<br>- Compile a list of resources and configuration values required for the initial deployment. | 20/11/2026 | 20/11/2026 | [AWS SAM Template Anatomy](https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-specification-template-anatomy.html) |
 
+### Week 7 Achievements
 
-### Week 7 Achievements:
+- Understand the purpose of the Lambda handler and its `event` and `context` parameters.
+- Identify the required changes to the Python pipeline:
+  - Replace manual API key entry with authorized parameter retrieval.
+  - Replace local file paths with an appropriate AWS storage approach.
+  - Return execution results and record logs for monitoring.
+- Define an approach for storing the EIA API key using Parameter Store SecureString.
+- Understand how EventBridge Scheduler invokes Lambda on a schedule.
+- List the information to monitor in CloudWatch Logs.
+- Gain an initial understanding of the main SAM template sections, including `Parameters`, `Globals`, `Resources`, and `Outputs`.
 
-* Understood what AWS is and mastered the basic service groups: 
-  * Compute
-  * Storage
-  * Networking 
-  * Database
-  * ...
+### Challenges and Next Steps
 
-* Successfully created and configured an AWS Free Tier account.
+- The current pipeline uses local files and requires manual API key entry, so it needs adjustments before running automatically.
+- Adapt individual functions for Lambda and test each step before enabling the schedule.
 
-* Became familiar with the AWS Management Console and learned how to find, access, and use services via the web interface.
+### End-of-Week Status
 
-* Installed and configured AWS CLI on the computer, including:
-  * Access Key
-  * Secret Key
-  * Default Region
-  * ...
-
-* Used AWS CLI to perform basic operations such as:
-
-  * Check account & configuration information
-  * Retrieve the list of regions
-  * View EC2 service
-  * Create and manage key pairs
-  * Check information about running services
-  * ...
-
-* Acquired the ability to connect between the web interface and CLI to manage AWS resources in parallel.
-* ...
+Further develop the approach for migrating the Python pipeline to AWS and prepare the deployment structure. This week focused on learning and design; no additional AWS resources were recorded as deployed for the project.
